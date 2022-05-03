@@ -1,8 +1,13 @@
+import Layout from "./components/layout/Layout";
+
 function App() {
   return (
-    <div className="bg-red-500 text-white text-center">
-      Cargo App
-    </div>
+    <Layout>
+      <div className="bg-red-500 text-white text-center">
+        content
+      </div>
+    </Layout>
+
   );
 }
 
