@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom/client';
 import { useState, useContext } from 'react';
 import AuthContext from '../../store/auth-context';
 
@@ -25,7 +26,7 @@ const MainNavigation = () => {
             {authCtx.isLoggedIn &&
                 <nav className='flex basis-2/12 justify-evenly'>
                     <div className='w-4 cursor-pointer' onClick={profileHandler}><User /></div>
-                    {showModal && <Profile />}
+                    {showModal && ReactDOM.createPortal(<Profile />, document.getElementById('modal'))}
                     <div className='w-4 cursor-pointer'><Menu /></div>
                 </nav>
             }
