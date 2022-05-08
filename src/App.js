@@ -1,12 +1,19 @@
-import Layout from "./components/layout/Layout";
+import { Routes, Route, useParams } from "react-router-dom";
+
+import Addresses from "./pages/Addresses";
+import Packages from "./pages/Packages";
+import Balance from "./pages/Balance";
+
 
 function App() {
+  // const params = useParams();
   return (
-    <Layout>
-      <div className="bg-red-500 text-white text-center">
-        content
-      </div>
-    </Layout>
+    <Routes>
+      <Route path='/' element={<Addresses />} />
+      <Route path='/addresses' element={<Addresses />} />
+      <Route path='/packages' element={<Packages />} />
+      <Route path='/balance' element={<Balance />} />
+    </Routes>
 
   );
 }

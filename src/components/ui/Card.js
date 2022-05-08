@@ -1,6 +1,6 @@
 const Card = (props) => {
     return (
-        <div className="bg-white rounded text-black p-4">
+        <div className={`bg-white rounded shadow-xl p-4 ${props.className}`}>
             {props.children}
         </div>
     );

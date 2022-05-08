@@ -26,7 +26,7 @@ const MainNavigation = () => {
             {authCtx.isLoggedIn &&
                 <nav className='flex basis-2/12 justify-evenly'>
                     <div className='w-4 cursor-pointer' onClick={profileHandler}><User /></div>
-                    {showModal && ReactDOM.createPortal(<Profile />, document.getElementById('modal'))}
+                    {showModal && <Profile />}
                     <div className='w-4 cursor-pointer'><Menu /></div>
                 </nav>
             }
