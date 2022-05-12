@@ -1,12 +1,13 @@
 import { useState } from "react";
-import Layout from "../components/layout/Layout";
-import Card from "../components/ui/Card";
 
-const Addresses = () => {
+import Card from "../ui/Card";
+
+const Tariff = () => { 
     const [isTurkeySelected, setIsTurkeySelected] = useState(true);
 
     return (
-        <Layout>
+        <Card>
+            <h2 className="text-center font-semibold">Tariff</h2>
             <Card>
                 <div className="flex text-center w-3/4 m-auto">
                     <div className={`basis-1/2 p-2 font-bold transition-colors cursor-pointer ${isTurkeySelected ? 'bg-yellow-500' : ''}`} onClick={() => { setIsTurkeySelected(true); }}>Turkey</div>
@@ -31,8 +32,8 @@ const Addresses = () => {
                         </pre>}
                 </div>
             </Card>
-        </Layout>
+        </Card>
     );
 };
 
-export default Addresses;
+export default Tariff;

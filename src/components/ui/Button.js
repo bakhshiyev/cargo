@@ -1,8 +1,8 @@
 const Button = (props) => {
     return (
-        <div className="cursor-pointer bg-[#351dab] text-white w-1/2 m-auto rounded p-2">
+        <button className="bg-[#351dab] text-white w-1/2 m-auto rounded p-2 text-center font-semibold">
             {props.children}
-        </div>
+        </button>
     );
 };
 

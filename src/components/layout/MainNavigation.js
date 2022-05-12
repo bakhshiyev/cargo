@@ -5,6 +5,7 @@ import AuthContext from '../../store/auth-context';
 import User from '../icons/User';
 import Menu from '../icons/Menu';
 import Profile from '../modals/Profile';
+import { NavLink } from 'react-router-dom';
 
 const MainNavigation = () => {
     const authCtx = useContext(AuthContext);
@@ -16,11 +17,11 @@ const MainNavigation = () => {
 
     return (
         <div className='flex h-[60px] bg-[#351dab] text-white items-center'>
-            <h1 className='font-bold basis-10/12 p-5'>MyCargo</h1>
+            <NavLink to='/' className='font-bold basis-10/12 p-5'>MyCargo</NavLink>
             {!authCtx.isLoggedIn &&
                 <nav className='flex basis-2/12 justify-evenly'>
-                    <div className='w-4'><button onClick={authCtx.onLogin}>Login</button></div>
-                    <div className='w-4'>Register</div>
+                    <div><NavLink to='/register'>Get Started</NavLink></div>
+                    <div className='w-4 cursor-pointer'><Menu /></div>
                 </nav>
             }
             {authCtx.isLoggedIn &&
