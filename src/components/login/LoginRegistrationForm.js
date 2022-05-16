@@ -4,6 +4,7 @@ import Layout from "../layout/Layout";
 import Button from "../ui/Button";
 import Card from "../ui/Card";
 import Input from "../ui/Input";
+import { useNavigate } from 'react-router-dom';
 
 const LoginRegistrationForm = (props) => {
     const [logIn, setLogIn] = useState(true);
@@ -11,6 +12,7 @@ const LoginRegistrationForm = (props) => {
     const usernameInputRef = useRef();
     const emailInputRef = useRef();
     const passwordInputRef = useRef();
+    const navigate = useNavigate();
 
     const submitHandler = event => {
         event.preventDefault();
@@ -38,6 +40,7 @@ const LoginRegistrationForm = (props) => {
         }).then(res => {
             if (res.ok) {
                 authCtx.onLogin();
+                navigate('/addresses', { replace: true });
                 alert('Registered Successfully');
             } else {
                 return res.json().then(data => {

@@ -14,21 +14,44 @@ const Addresses = () => {
                 </div>
                 <div className="w-3/4 m-auto">
                     {isTurkeySelected &&
-                        <pre>
-                            Emmanuel Macron
-                            +994 50 487 5411
-                            Kadikoy
-                            Istanbul
-                            Yalova
-                        </pre>}
+                        <Card className="flex flex-wrap">
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">İlçe / Semt</h3>
+                                <p className="font-semibold">Esenyurt</p>
+                            </Card>
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">İl (Şehir)</h3>
+                                <p className="font-semibold">İstanbul</p>
+                            </Card>
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">Adres başlığı</h3>
+                                <p className="font-semibold">MyCargo Lojistik</p>
+                            </Card>
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">Mahalle</h3>
+                                <p className="font-semibold">Güzelyurt mahallesi</p>
+                            </Card>
+                        </Card>}
                     {!isTurkeySelected &&
-                        <pre>
-                            Emmanuel Macron
-                            +994 50 487 5411
-                            Wilmington
-                            Deleware
-                            Boston
-                        </pre>}
+                        <Card className="flex flex-wrap">
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">City:</h3>
+                                <p className="font-semibold">Wilmington</p>
+                            </Card>
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">State/Province/Region:</h3>
+                                <p className="font-semibold">DE</p>
+                            </Card>
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">Address Line1:</h3>
+                                <p className="font-semibold"> 4 LEWIS CIRCLE</p>
+                            </Card>
+                            <Card className="basis-1/2 shadow-none">
+                                <h3 className="text-[#2b2929]">ZIP code</h3>
+                                <p className="font-semibold">19555</p>
+                            </Card>
+                        </Card>
+                    }
                 </div>
             </Card>
         </Layout>

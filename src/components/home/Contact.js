@@ -1,26 +1,27 @@
 import Card from "../ui/Card";
 import Button from '../ui/Button';
+import Layout from "../layout/Layout";
 
 const Contact = () => {
     return (
-        <Card>
-            <h2 className="text-center font-semibold">Contact</h2>
+        <div>
+            <h2 className="text-center font-bold text-3xl text-[#3d3c3c]">Əlaqə</h2>
             <div className="flex">
                 <div className="basis-1/2">
                     <form>
                         <div>
-                            <label htmlFor="contactEmail">Your Email</label>
+                            <label htmlFor="contactEmail">Email</label>
                             <input required type='email' id='contactEmail' />
                         </div>
                         <div>
-                            <label htmlFor="contact-phone">Your Phone Number</label>
+                            <label htmlFor="contact-phone">Əlaqə nömrəsi</label>
                             <input type='tel' id='contact-phone' />
                         </div>
                         <div>
-                            <label htmlFor="message">Your Message</label>
+                            <label htmlFor="message">Mesajınız</label>
                             <textarea id='message' />
                         </div>
-                        <Button>send</Button>
+                        <Button>göndər</Button>
                     </form>
                 </div>
                 <div className="basis-1/2">
@@ -29,7 +30,7 @@ const Contact = () => {
                     </iframe>
                 </div>
             </div>
-        </Card>
+        </div>
     );
 };
 
